@@ -11,12 +11,14 @@ const Doctor = sequelize.define('Doctor', {
     type: DataTypes.STRING,
     allowNull: false,
     unique: true,
+    defaultValue:"doctor@clinicflow.com",
     validate: {
       isEmail: true
     }
   },
   password: {
     type: DataTypes.STRING,
+    defaultValue:"password123",
     allowNull: false
   },
   name: {
